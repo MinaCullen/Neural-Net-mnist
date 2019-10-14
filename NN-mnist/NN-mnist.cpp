@@ -165,7 +165,7 @@ private: //
 		VectorXf temp2 = sigmoid_prime(z_vecs[z_vecs.size() - 1]);
 		VectorXf delta = hadamard_product(temp1, temp2); //delta of last layer
 		nabla_b[nabla_b.size() - 1] = delta; //change in cost with respect to biases in last layer
-		nabla_w[nabla_w.size() - 1] = delta * activations[activations.size() - 2].transpose(); //change in cost with respect to biases in last layer
+		nabla_w[nabla_w.size() - 1] = delta * activations[activations.size() - 2].transpose(); //change in cost with respect to weights in last layer
 		for (int l = 2; l < num_layers; l++) { //backwards pass - find deltas for each layer
 			auto z = z_vecs[z_vecs.size() - l];
 			VectorXf sp = sigmoid_prime(z);
