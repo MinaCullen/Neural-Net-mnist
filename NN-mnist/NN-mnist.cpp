@@ -321,8 +321,8 @@ tuple<vector<VectorXf>, vector<VectorXf>, vector<VectorXf>, vector<VectorXf>, ve
 	test_img.erase(test_img.begin(), test_img.end() - 10000);
 	training_labels.erase(training_labels.begin() + 50000, training_labels.end());
 	training_images.erase(training_images.begin() + 50000, training_images.end());
-	return make_tuple(training_labels, training_images, test_lab, test_img, test_images);
-}
+	return make_tuple(training_labels, training_images, test_lab, test_img, test_images); //i had some issues with the 'dataset.test_images/labels sets (i think they were labelled wrong..),  
+}                                                                                            //so have just decided to use them for display purposes
 void train_net() {
 	vector<int> vec{ 784,100,10 };
 	network* net = new network(vec);
