@@ -115,7 +115,7 @@ std::vector<Label> read_mnist_label_file(const std::string& path) {
  */
 template <typename Pixel = uint8_t>
 std::vector<std::vector<Pixel>> read_training_images() {
-    return read_mnist_image_file<Pixel>("C:/Users/Mina/source/repos/NN-mnist/mnist-master/mnist/train-images-idx3-ubyte");
+    return read_mnist_image_file<Pixel>("../mnist-master/mnist/train-images-idx3-ubyte");
 }
 
 /*!
@@ -127,7 +127,7 @@ std::vector<std::vector<Pixel>> read_training_images() {
  */
 template <typename Pixel = uint8_t>
 std::vector<std::vector<Pixel>> read_test_images() {
-    return read_mnist_image_file<Pixel>("C:/Users/Mina/source/repos/NN-mnist/mnist-master/mnist/t10k-images-idx3-ubyte");
+    return read_mnist_image_file<Pixel>("../mnist-master/mnist/t10k-images-idx3-ubyte");
 }
 
 /*!
@@ -139,7 +139,7 @@ std::vector<std::vector<Pixel>> read_test_images() {
  */
 template <typename Label = uint8_t>
 std::vector<Label> read_training_labels() {
-    return read_mnist_label_file<Label>("C:/Users/Mina/source/repos/NN-mnist/mnist-master/mnist/train-labels-idx1-ubyte");
+    return read_mnist_label_file<Label>("../mnist-master/mnist/train-labels-idx1-ubyte");
 	
 }
 
@@ -152,7 +152,7 @@ std::vector<Label> read_training_labels() {
  */
 template <typename Label = uint8_t>
 std::vector<Label> read_test_labels() {
-    return read_mnist_label_file<Label>("C:/Users/Mina/source/repos/NN-mnist/mnist-master/mnist/t10k-labels-idx1-ubyte");
+    return read_mnist_label_file<Label>("../mnist-master/mnist/t10k-labels-idx1-ubyte");
 }
 
 /*!

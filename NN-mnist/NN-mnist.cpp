@@ -20,7 +20,7 @@ using namespace Eigen;
 using namespace mnist;
 
 struct network {
-private:
+private: //
 	int num_layers;
 	vector<int> sizes;
 	vector<MatrixXf> biases;
